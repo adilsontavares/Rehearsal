@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import HelloWorld from './components/HelloWorld'
+import Counter from './components/Counter'
 import './styles/main.css'
 
 class App extends Component {
 
     render() {
-        return <HelloWorld />
+        return <Counter initialCount={10} />
     }
 }
 
