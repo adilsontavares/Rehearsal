@@ -27,7 +27,7 @@ class RegisterBand extends Component {
 
     removeMember(member) {
         this.setState({
-            members: this.state.members.filter(x => x != member)
+            members: this.state.members.filter(x => x !== member)
         })
     }
 
@@ -41,7 +41,7 @@ class RegisterBand extends Component {
                         <label className="label">Membros da banda</label>
                         {
                             this.state.members.map((x, index) => (
-                                <div className="field">
+                                <div className="field" key={index}>
                                     <div className="card">
                                         <div className="card-header">
                                             <h2 className="card-header-title">

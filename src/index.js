@@ -4,6 +4,7 @@ import Router from './router';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter } from 'react-router-dom'
 
+import './proto/index'
 import 'bulma/css/bulma.css'
 import './styles/main.css'
 

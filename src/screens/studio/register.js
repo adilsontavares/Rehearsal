@@ -61,18 +61,22 @@ class RegisterStudio extends Component {
                         </div>
                         <table className="table">
                             <thead>
-                                { this.state.weekdays.map(x => <th>{x.title}</th>) }
+                                <tr>
+                                    { this.state.weekdays.map((x, index) => <th key={index}>{x.title}</th>) }
+                                </tr>
                             </thead>
                             <tbody>
-                                { 
-                                    this.state.weekdays.map(x => (
-                                        <td className="has-text-centered">
-                                            <label className="checkbox">
-                                                <input type="checkbox" defaultChecked={x.checked} onChange={x.checked = !x.checked} />
-                                            </label>
-                                        </td>
-                                    ))
-                                }
+                                <tr>
+                                    { 
+                                        this.state.weekdays.map((x, index) => (
+                                            <td className="has-text-centered" key={index}>
+                                                <label className="checkbox">
+                                                    <input type="checkbox" defaultChecked={x.checked} onChange={() => x.checked = !x.checked} />
+                                                </label>
+                                            </td>
+                                        ))
+                                    }
+                                </tr>
                             </tbody>
                         </table>
                         <button className="button is-success">

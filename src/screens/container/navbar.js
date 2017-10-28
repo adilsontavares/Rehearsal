@@ -7,10 +7,10 @@ class Navbar extends Component {
 
     render() {
         return (
-            <nav className="navbar" role="navigation">
+            <nav className="navbar">
                 <div className="navbar-brand">
                     <Link className="navbar-item" to="/studios">
-                        <img src="/navbar-logo.png" />
+                        <img src="/navbar-logo.png" alt="Rehearsal logo" />
                     </Link>
                 </div>
                 <div className="navbar-menu">
@@ -21,9 +21,9 @@ class Navbar extends Component {
                         <Link className="navbar-item" to="/check-time">
                             <div className="field is-grouped">
                                 <p className="control">
-                                    <a className="button is-primary">
+                                    <span className="button is-primary">
                                         Verificar horários
-                                    </a>
+                                    </span>
                                 </p>
                             </div>
                         </Link>
