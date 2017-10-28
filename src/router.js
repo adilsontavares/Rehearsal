@@ -1,17 +1,18 @@
 import React, { Component } from 'react'
 import Navbar from './screens/container/navbar'
 import RegisterBand from './screens/band/register'
+import RegisterStudio from './screens/studio/register'
+import ListStudios from './screens/studio/list'
 
-class Index extends Component {
+import { Router, Route, Switch } from 'react-router'
 
-    render() {
-        return (
-            <div>
-                <Navbar />
-                <RegisterBand />
-            </div>
-        )
-    }
-}
-
-export default Index
+export default () => (
+    <main>
+        <Navbar />
+        <Switch>
+            <Route path="/studios/new" component={RegisterStudio} />
+            <Route path="/studios" component={ListStudios} />
+            <Route path="/check-time" component={RegisterBand} />
+        </Switch>
+    </main>
+)
